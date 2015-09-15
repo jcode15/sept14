@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',function(){
 function detect_swipe_events(element_to_detect) {
         
     var swipe_event = function (element, event_type) {
-        var event_action = document.getElementsByClassName(game_list_item).createEvent("CustomEvent");
+        var event_action = element_to_detect.createEvent("CustomEvent");
         event_action.initCustomEvent(event_type, true, true, element.target);
         element.target.dispatchEvent(event_action);
         event_action = null;
@@ -45,7 +45,7 @@ function detect_swipe_events(element_to_detect) {
     var swipe_x_difference;
     var swipe_y_difference;
 
-      swipe_event_tyoe = function () {
+      swipe_event_type = function () {
         swipe_x_difference = Math.abs(swipe_end_x - swipe_start_x);
         swipe_y_difference = Math.abs(swipe_end_y - swipe_start_y);
         var event_type = Math.max(swipe_x_difference, swipe_y_difference) > swipe_move_threshold ?
@@ -72,7 +72,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           },
           touchcancel: function (e) {
             swipe_active = false;
@@ -111,7 +111,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           }
         }
       };
@@ -128,7 +128,7 @@ function add_mobile_event_listners(element_name) {
   }
 
     
-  var element_to_detect_swipe = document.getElementsByTagName(element_name)[0];
+  var element_to_detect_swipe = document.getElementsByTagName('li')[0];
     
     var  swipe_event_type = [
           'swipe_tap',
@@ -168,5 +168,4 @@ function add_mobile_event_listners(element_name) {
     detect_swipe_events(document);
     add_mobile_event_listners('li');
 
-    
-});
+}); 

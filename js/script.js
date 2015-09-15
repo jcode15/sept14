@@ -1,6 +1,6 @@
 /*put your javascript here*/
-document.addEventListener('DOMContentLoaded',function(){
-function detect_swipe_events(element_to_detect) {
+// document.addEventListener('DOMContentLoaded',function(){
+// function detect_swipe_events(element_to_detect) {
 
 //     var abs = Math.abs;
 //     var max = Math.max;
