@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded',function(){
 function detect_swipe_events(element_to_detect) {
         
     var swipe_event = function (element, event_type) {
@@ -165,6 +166,6 @@ function add_mobile_event_listners(element_name) {
     event.preventDefault();
   }, false);
 };
-    
     detect_swipe_events(document);
-    add_mobile_event_listners('div');
+    add_mobile_event_listners(document.getElementsByTagName('li'));
+  });
