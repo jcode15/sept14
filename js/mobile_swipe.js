@@ -166,6 +166,6 @@ function add_mobile_event_listners(element_name) {
     event.preventDefault();
   }, false);
 };
-    detect_swipe_events(document);
-    add_mobile_event_listners(document.getElementsByTagName('li'));
+    detect_swipe_events(document.getElementsByTagName('li'));
+    add_mobile_event_listners(document.getElemenstByClassName(game_list_item));
   });
