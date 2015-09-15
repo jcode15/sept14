@@ -66,10 +66,10 @@ var function_loop_mouse_enter = function(){
 		game_list_item[i].addEventListener('mouseup', function(){
 			end_swipe = event.clientX;
 			if (start_swipe + threshold < end_swipe ){
-				alert("swipe right");				
+				//alert("swipe right");				
 			}
 			if (start_swipe > end_swipe + threshold){
-				alert('swipe left')
+				//alert('swipe left')
 			}
 		});
 	
@@ -98,21 +98,21 @@ var function_loop_mouse_enter = function(){
 
      		if (start_swipe_y < end_swipe_y){
      			if (end_swipe_y - start_swipe_y > y_threshold){
-     				alert("crooked fingers");
-     				alert(end_swipe_y - start_swipe_y);
+     				//alert("crooked fingers");
+     				//alert(end_swipe_y - start_swipe_y);
      			}
      		} 
      		if (start_swipe_y > end_swipe_y){
      			if (start_swipe_y - end_swipe_y > y_threshold){
-     				alert("crooked fingers");
-     				alert(start_swipe_y - end_swipe_y)
+     				//alert("crooked fingers");
+     				//alert(start_swipe_y - end_swipe_y)
      			}
      		}       			
 			if (start_swipe + threshold< end_swipe ){
-				alert("swipe right");				
+				//alert("swipe right");				
 			}
 			if (start_swipe > end_swipe + threshold){
-				alert('swipe left')
+				//alert('swipe left')
 			}
 		});
-alert('crookedfingers1');
+//alert('crookedfingers1');
