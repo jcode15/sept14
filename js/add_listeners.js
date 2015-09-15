@@ -27,19 +27,23 @@ document.getElementById("name_input_box").addEventListener('keydown', function k
     };
 });
 
+
+function_loop_mouse_enter();
+
 game_list_item[0].addEventListener('mouseenter', function(){
-		
 		game_list_item[1].classList.remove("closed");
 		game_list_item[1].classList.add("open");
 });
 
 game_list_item[2].addEventListener('mouseenter', function(){
-
-    	game_list_item[1].classList.remove("open");
     	game_list_item[1].classList.add("closed");
+    	game_list_item[1].classList.remove("open");
 });
 
 game_unordered_list.addEventListener('mouseleave', function(){
-	game_list_item[1].classList.remove("open");
-	game_list_item[1].classList.add("closed");
+    	game_list_item[1].classList.add("closed");
+    	game_list_item[1].classList.remove("open");
 });
+
+
+add_mobile_event_listners('li');
