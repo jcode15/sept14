@@ -114,11 +114,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(event, 'swipe_double_tap');
             }
             swipe_active = false;
-<<<<<<< HEAD
             return swipe_event(event, swipe_event_type());
-=======
-            return swipe_event(e, swipe_event_type());
->>>>>>> master
           }
         }
       };
@@ -135,7 +131,7 @@ function add_mobile_event_listners(element_name) {
   }
 
     
-  var element_to_detect_swipe = document.getElementsByTagName('li')[0];
+  var element_to_detect_swipe = document.getElementsByTagName(element_name)[0];
     
     var  swipe_event_type = [
           'swipe_tap',
@@ -171,10 +167,4 @@ function add_mobile_event_listners(element_name) {
 };
     
     detect_swipe_events(document);
-<<<<<<< HEAD
     add_mobile_event_listners('div');
-=======
-    add_mobile_event_listners('li');
-
-}); 
->>>>>>> master
