@@ -133,7 +133,7 @@ function add_mobile_event_listners(element_name) {
 
     
   var element_to_detect_swipe = document.getElementsByTagName(element_name)[0];
-    
+  
     var  swipe_event_type = [
           'swipe_tap',
           'swipe_double_tap',
